@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Main container -->
+<div class="container mx-auto px-4 py-8">
+    <!-- Hero Section with Gradient Background -->
+    <div class="bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-lg shadow-lg p-8 mb-12 text-center">
+        <h1 class="text-5xl font-extrabold mb-4">Sales by Location Analysis</h1>
+        <p class="text-lg mb-6">Discover sales trends across different regions, outlet types, and locations to optimize your business strategy.</p>
+        <a href="#analysis" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-100 transition-all duration-300">Explore Data Insights</a>
+    </div>
+
+    <!-- Why Location Matters Section with Icons and Cards -->
+    <section class="mb-16">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Why Location is Key to Sales?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <svg class="w-12 h-12 text-blue-600 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-700">Regional Sales Trends</h3>
+                </div>
+                <p class="text-gray-600">Identify which regions contribute the most to your overall sales and adjust marketing accordingly.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <svg class="w-12 h-12 text-blue-600 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-700">Outlet Type Optimization</h3>
+                </div>
+                <p class="text-gray-600">Analyze sales patterns by outlet type and location to optimize store placement and product offerings.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex items-center mb-4">
+                    <svg class="w-12 h-12 text-blue-600 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                    <h3 class="text-xl font-bold text-gray-700">Strategic Expansions</h3>
+                </div>
+                <p class="text-gray-600">Use location data to strategically expand to regions and locations with higher sales potential.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section with Hover Effects -->
+    <section id="analysis" class="bg-gray-50 rounded-lg shadow-lg p-8">
+        <h2 class="text-4xl font-semibold text-center text-gray-800 mb-8">Sales by Location Analysis</h2>
+        <div class="flex justify-center mb-8">
+            <img src="/static/images/sales_by_location.png" alt="Sales by Location" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full max-w-4xl">
+        </div>
+        <p class="text-center text-gray-500 mb-6">Figure: Visualization of sales trends across different regions, outlet types, and locations.</p>
+        <div class="text-center">
+            <a href="/sales_by_location_report" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300">Download Full Report</a>
+        </div>
+    </section>
+
+    <!-- Key Insights Section with Icons -->
+    <section class="bg-white rounded-lg shadow-lg p-8 mt-12">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Key Insights</h2>
+        <ul class="list-none grid grid-cols-1 md:grid-cols-3 gap-8 text-lg">
+            <li class="flex items-start">
+                <svg class="w-8 h-8 text-blue-500 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Urban locations account for the highest percentage of sales across all outlet types.</span>
+            </li>
+            <li class="flex items-start">
+                <svg class="w-8 h-8 text-blue-500 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Supermarket and Grocery outlets in suburban areas have shown consistent growth in sales.</span>
+            </li>
+            <li class="flex items-start">
+                <svg class="w-8 h-8 text-blue-500 mr-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span>Sales in rural locations tend to have seasonal fluctuations due to local events and demographics.</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="text-center mt-16">
+        <h2 class="text-5xl font-extrabold text-blue-600 mb-6">Unlock More Location Insights</h2>
+        <p class="text-lg text-gray-600 mb-8">Ready to optimize your sales strategy based on location data? Contact us to explore how geographic analysis can drive growth.</p>
+        <a href="/contact" class="bg-gradient-to-r from-green-600 to-blue-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">Contact Us</a>
+    </section>
+</div>
+{% endblock %}
