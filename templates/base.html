@@ -3,36 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Sales Analytics</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Blinkit Sales Data Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-    <!-- Navbar -->
-    <nav class="bg-blue-600 p-4 text-white">
-        <div class="container mx-auto flex justify-between">
-            <a href="/" class="font-bold text-2xl">Grocery Sales Analytics</a>
-            <div>
-                <a href="/sales_overview" class="mx-2 hover:underline">Sales Overview</a>
-                <a href="/category_performance" class="mx-2 hover:underline">Category Performance</a>
-                <a href="/top_products" class="mx-2 hover:underline">Top Products</a>
-                <a href="/regional_sales" class="mx-2 hover:underline">Regional Sales</a>
-            </div>
-        </div>
+<body>
+    <nav class="bg-gray-800 p-4 text-white">
+        <ul class="flex space-x-4">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/sales-trends" class="hover:underline">Sales Trends</a></li>
+            <li><a href="/top-selling-items" class="hover:underline">Top Selling Items</a></li>
+            <li><a href="/visibility-vs-sales" class="hover:underline">Visibility vs Sales</a></li>
+            <li><a href="/sales-by-location" class="hover:underline">Sales by Location</a></li>
+        </ul>
     </nav>
-
-    <!-- Main Content -->
-    <div class="container mx-auto py-8">
-        {% block content %}
-        <!-- Content will be injected here -->
-        {% endblock %}
+    <div class="container mx-auto p-8">
+        {% block content %}{% endblock %}
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2024 Grocery Sales Analytics</p>
-    </footer>
-
 </body>
 </html>

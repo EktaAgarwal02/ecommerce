@@ -1,94 +1,83 @@
 from flask import Flask, render_template
 import pandas as pd
-import plotly.express as px
-import plotly.io as pio
+import matplotlib.pyplot as plt
+
+# Use Agg backend for non-interactive environments
+import matplotlib
+matplotlib.use('Agg')
 
 app = Flask(__name__)
 
-# Load and preprocess the dataset
+# Load the dataset
 df = pd.read_csv('BlinkIT-Grocery-Data (1).csv')
 
-# Sample preprocessing (replace with relevant column names in your dataset)
-# For example, let's assume the dataset has the following columns:
-# 'date', 'category', 'product', 'region', 'city', 'quantity_sold', 'sales'
+# Sales Trends Over Time
+def create_sales_trends_analysis():
+    df['Year'] = df['Outlet Establishment Year']
+    year_sales = df.groupby('Year')['Sales'].sum()
+    year_sales.plot(kind='line', figsize=(10, 6))
+    plt.title('Sales Trends Over Time (by Year of Outlet Establishment)')
+    plt.xlabel('Year')
+    plt.ylabel('Total Sales')
+    plt.savefig('static/images/sales_trends.png')
+    plt.clf()
 
-df['date'] = pd.to_datetime(df['date'])
-df['month'] = df['date'].dt.to_period('M')
+# Top 10 Selling Items
+def create_top_selling_items_analysis():
+    top_items = df.groupby('Item Identifier')['Sales'].sum().sort_values(ascending=False).head(10)
+    top_items.plot(kind='bar', figsize=(10, 6))
+    plt.title('Top 10 Best-Selling Items')
+    plt.xlabel('Item Identifier')
+    plt.ylabel('Total Sales')
+    plt.savefig('static/images/top_selling_items.png')
+    plt.clf()
 
-# Helper function to convert Plotly figures to JSON for use in templates
-def plot_to_json(fig):
-    return pio.to_json(fig)
+# Item Visibility vs Sales
+def create_visibility_vs_sales_analysis():
+    plt.scatter(df['Item Visibility'], df['Sales'], alpha=0.5)
+    plt.title('Item Visibility vs Sales')
+    plt.xlabel('Item Visibility')
+    plt.ylabel('Sales')
+    plt.savefig('static/images/visibility_vs_sales.png')
+    plt.clf()
 
-# Home Route (Landing Page)
+# Sales by Outlet Location Type
+def create_sales_by_location_analysis():
+    location_sales = df.groupby('Outlet Location Type')['Sales'].sum()
+    location_sales.plot(kind='bar', figsize=(10, 6))
+    plt.title('Sales by Outlet Location Type')
+    plt.xlabel('Outlet Location Type')
+    plt.ylabel('Total Sales')
+    plt.savefig('static/images/sales_by_location.png')
+    plt.clf()
+
 @app.route('/')
 def index():
-    # Example metrics (replace with appropriate calculations based on your dataset)
-    total_sales = df['sales'].sum()
-    total_orders = len(df)
-    avg_order_value = df['sales'].mean()
+    return render_template('index.html')
 
-    return render_template('index.html', total_sales=total_sales, total_orders=total_orders, avg_order_value=avg_order_value)
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
-# Sales Overview Page
-@app.route('/sales_overview')
-def sales_overview():
-    # Total Sales Over Time
-    sales_over_time = df.groupby('month')['sales'].sum().reset_index()
-    fig_sales_line = px.line(sales_over_time, x='month', y='sales', title='Total Sales Over Time')
-    sales_line_data = plot_to_json(fig_sales_line)
+@app.route('/sales-trends')
+def sales_trends():
+    create_sales_trends_analysis()
+    return render_template('sales_trends.html')
 
-    # Monthly Sales Distribution
-    sales_by_month = df.groupby(df['date'].dt.month)['sales'].sum().reset_index()
-    fig_sales_bar = px.bar(sales_by_month, x='date', y='sales', title='Monthly Sales Distribution')
-    sales_bar_data = plot_to_json(fig_sales_bar)
+@app.route('/top-selling-items')
+def top_selling_items():
+    create_top_selling_items_analysis()
+    return render_template('top_selling_items.html')
 
-    return render_template('sales_overview.html', sales_line_data=sales_line_data, sales_bar_data=sales_bar_data)
+@app.route('/visibility-vs-sales')
+def visibility_vs_sales():
+    create_visibility_vs_sales_analysis()
+    return render_template('visibility_vs_sales.html')
 
-# Category Performance Page
-@app.route('/category_performance')
-def category_performance():
-    # Category-wise Sales
-    category_sales = df.groupby('category')['sales'].sum().reset_index()
-    fig_category_pie = px.pie(category_sales, values='sales', names='category', title='Category-wise Sales')
-    category_pie_data = plot_to_json(fig_category_pie)
+@app.route('/sales-by-location')
+def sales_by_location():
+    create_sales_by_location_analysis()
+    return render_template('sales_by_location.html')
 
-    # Category Sales Over Time
-    category_sales_time = df.groupby(['month', 'category'])['sales'].sum().reset_index()
-    fig_category_bar = px.bar(category_sales_time, x='month', y='sales', color='category', title='Category Sales Over Time')
-    category_bar_data = plot_to_json(fig_category_bar)
-
-    return render_template('category_performance.html', category_pie_data=category_pie_data, category_bar_data=category_bar_data)
-
-# Top Products Analysis Page
-@app.route('/top_products')
-def top_products():
-    # Top 10 Products by Sales
-    top_products_sales = df.groupby('product')['sales'].sum().sort_values(ascending=False).head(10).reset_index()
-    fig_top_products_sales = px.bar(top_products_sales, x='product', y='sales', title='Top 10 Products by Sales')
-    top_products_sales_data = plot_to_json(fig_top_products_sales)
-
-    # Top 10 Products by Quantity Sold
-    top_products_quantity = df.groupby('product')['quantity_sold'].sum().sort_values(ascending=False).head(10).reset_index()
-    fig_top_products_quantity = px.bar(top_products_quantity, x='product', y='quantity_sold', title='Top 10 Products by Quantity Sold', orientation='h')
-    top_products_quantity_data = plot_to_json(fig_top_products_quantity)
-
-    return render_template('top_products.html', top_products_sales_data=top_products_sales_data, top_products_quantity_data=top_products_quantity_data)
-
-# Regional Sales Insights Page
-@app.route('/regional_sales')
-def regional_sales():
-    # Sales by Region
-    regional_sales = df.groupby('region')['sales'].sum().reset_index()
-    fig_regional_sales = px.scatter_geo(regional_sales, locations='region', locationmode='country names', size='sales', title='Sales by Region')
-    regional_sales_data = plot_to_json(fig_regional_sales)
-
-    # Sales by City
-    city_sales = df.groupby('city')['sales'].sum().reset_index()
-    fig_city_sales = px.density_heatmap(city_sales, x='city', y='sales', title='Sales by City')
-    city_sales_data = plot_to_json(fig_city_sales)
-
-    return render_template('regional_sales.html', regional_sales_data=regional_sales_data, city_sales_data=city_sales_data)
-
-# Run the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
