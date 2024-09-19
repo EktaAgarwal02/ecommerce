@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Use Agg backend for non-interactive environments
 import matplotlib
@@ -51,6 +52,17 @@ def create_sales_by_location_analysis():
     plt.savefig('static/images/sales_by_location.png')
     plt.clf()
 
+def fat_content_analysis():
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
+    plt.title('Distribution of Fat Content')
+    plt.xlabel('Fat Content')
+    plt.ylabel('Frequency')
+    plt.savefig('static/images/fat_content_analysis.png')
+    plt.clf()
+
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -78,6 +90,11 @@ def visibility_vs_sales():
 def sales_by_location():
     create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
+
+@app.route('/outlet-item-analysis')
+def outlet_item_analysis():
+    fat_content_analysis()
+    return render_template('outlet_item_analysis.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
