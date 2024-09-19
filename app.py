@@ -23,6 +23,7 @@ def create_sales_trends_analysis():
     plt.savefig('static/images/sales_trends.png')
     plt.clf()
 
+
 # Top 10 Selling Items
 def create_top_selling_items_analysis():
     top_items = df.groupby('Item Identifier')['Sales'].sum().sort_values(ascending=False).head(10)
@@ -31,6 +32,16 @@ def create_top_selling_items_analysis():
     plt.xlabel('Item Identifier')
     plt.ylabel('Total Sales')
     plt.savefig('static/images/top_selling_items.png')
+    plt.clf()
+# Visualization of Item Types
+def create_item_type_analysis():
+    plt.figure(figsize=(12, 8))
+    sns.countplot(data=df, x='Item Type', order=df['Item Type'].value_counts().index)
+    plt.title('Distribution of Item Types')
+    plt.xlabel('Item Type')
+    plt.ylabel('Count')
+    plt.xticks(rotation=90)
+    plt.savefig('static/images/item_type.png')
     plt.clf()
 
 # Item Visibility vs Sales
@@ -61,6 +72,13 @@ def fat_content_analysis():
     plt.savefig('static/images/fat_content_analysis.png')
     plt.clf()
 
+# Plot pie chart for outlet sizes
+def outlet_size_distribution():
+    plt.figure(figsize=(8, 8))
+    plt.pie(outlet_size_distribution, labels=outlet_size_distribution.index, autopct='%1.1f%%', startangle=140)
+    plt.title('Distribution of Outlet Sizes')
+    plt.savefig('static/images/outlet_size_distribution')
+plt.clf()
 
 
 @app.route('/')
@@ -80,6 +98,10 @@ def sales_trends():
 def top_selling_items():
     create_top_selling_items_analysis()
     return render_template('top_selling_items.html')
+@app.route('/top-selling-items')
+def item_type_analysis():
+    create_item_type_analysis()
+    return render_template('top_selling_items.html')
 
 @app.route('/visibility-vs-sales')
 def visibility_vs_sales():
@@ -91,10 +113,14 @@ def sales_by_location():
     create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
 
-@app.route('/outlet-item-analysis')
+@app.route('/top-selling-items')
 def outlet_item_analysis():
     fat_content_analysis()
-    return render_template('outlet_item_analysis.html')
+    return render_template('top_selling_items.html')
+@app.route('/outlet-item-analysis')
+def outlet_size_distribution():
+    outlet_size_distribution()
+    return render_template('outlet-item-analysis.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
