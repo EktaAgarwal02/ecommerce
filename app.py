@@ -102,7 +102,7 @@ def create_Outlet_Establishment_Year():
     plt.title('Outlet Establishment Year Distribution')
     plt.xlabel('Year')
     plt.ylabel('Count')
-    plt.savefig('static/images/outlet_Establishment_Year.png')
+    plt.savefig('static/images/outlet_establishment_year.png')
     plt.clf()
 
 @app.route('/')
@@ -148,10 +148,10 @@ def Outlet_Size():
     create_outlet_size_analysis()
     return render_template('outlet_item_analysis.html')
 
-@app.route('/Outlet-Establishment-Year')
-def Outlet_Establishment_year():
+@app.route('/outlet-item-analysis')
+def Outlet_Establishment_Year():
     create_Outlet_Establishment_Year()
-    return render_template('Outlet_Establishment_Year.html')
+    return render_template('outlet_item_analysis.html')
 
 
 if __name__ == '__main__':
