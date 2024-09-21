@@ -71,7 +71,7 @@ def fat_content_analysis():
     plt.ylabel('Frequency')
     plt.savefig('static/images/fat_content_analysis.png')
     plt.clf()
-
+#outlet size analysis
 def create_outlet_size_analysis():
     outlet_size_distribution = df['Outlet Siz0e'].value_counts()
     plt.figure(figsize=(8, 8))
@@ -128,10 +128,10 @@ def item_type_analysis():
     create_item_type_analysis()
     return render_template('item_type_analysis.html')
 
-@app.route('/fat-content-analysis')
+@app.route('/top-selling-items')
 def outlet_item_analysis():
     fat_content_analysis()
-    return render_template('fat_content_analysis.html')
+    return render_template('top_selling_items.html')
 
 @app.route('/visibility-vs-sales')
 def visibility_vs_sales():
@@ -143,10 +143,10 @@ def sales_by_location():
     create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
 
-@app.route('/Outlet-Size-analysis')
+@app.route('/Outlet-item-analysis')
 def Outlet_Size():
     create_outlet_size_analysis()
-    return render_template('Outlet_Size_analysis.html')
+    return render_template('Outlet_item_analysis.html')
 
 @app.route('/Outlet-Establishment-Year')
 def Outlet_Establishment_year():
