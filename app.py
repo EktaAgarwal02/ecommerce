@@ -143,10 +143,10 @@ def sales_by_location():
     create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
 
-@app.route('/Outlet-item-analysis')
+@app.route('/outlet-item-analysis')
 def Outlet_Size():
     create_outlet_size_analysis()
-    return render_template('Outlet_item_analysis.html')
+    return render_template('outlet_item_analysis.html')
 
 @app.route('/Outlet-Establishment-Year')
 def Outlet_Establishment_year():
