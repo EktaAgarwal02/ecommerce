@@ -41,7 +41,7 @@ def create_item_type_analysis():
     plt.xlabel('Item Type')
     plt.ylabel('Count')
     plt.xticks(rotation=90)
-    plt.savefig('static/images/item_type.png')
+    plt.savefig('static/images/Item_Type_analysis.png')
     plt.clf()
 
 # Item Visibility vs Sales
@@ -65,21 +65,45 @@ def create_sales_by_location_analysis():
 
 def fat_content_analysis():
     plt.figure(figsize=(10, 6))
-    sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
+    sns.histplot(df['ItemFat Content'], bins=30, kde=True)
     plt.title('Distribution of Fat Content')
     plt.xlabel('Fat Content')
     plt.ylabel('Frequency')
     plt.savefig('static/images/fat_content_analysis.png')
     plt.clf()
 
-# Plot pie chart for outlet sizes
-def outlet_size_distribution():
+def create_outlet_size_analysis():
+    outlet_size_distribution = df['Outlet Siz0e'].value_counts()
     plt.figure(figsize=(8, 8))
     plt.pie(outlet_size_distribution, labels=outlet_size_distribution.index, autopct='%1.1f%%', startangle=140)
     plt.title('Distribution of Outlet Sizes')
-    plt.savefig('static/images/outlet_size_distribution')
-plt.clf()
 
+    plt.savefig('static/images/Outlet_Size_distribution.png')
+    plt.clf()
+# Set the theme for seaborn
+#sns.set_theme()
+
+# Visualization of Outlet Locations
+def create_outlet_location_analysis():
+    plt.figure(figsize=(12, 8))
+    sns.countplot(data=df, x='Outlet Location Type', order=df['Outlet Location Type'].value_counts().index)
+    plt.title('Distribution of Outlet Locations')
+    plt.xlabel('Outlet Location Type')
+    plt.ylabel('Count')
+    plt.xticks(rotation=45)
+    plt.savefig('static/images/outlet_location.png')
+    plt.clf()
+    
+# Visualization of Outlet Establishment Year
+def create_Outlet_Establishment_Year():
+    plt.figure(figsize=(10, 6))
+    sns.countplot(data=df, x='Outlet Establishment Year')
+    sns.countplot(data=df, x='Outlet Establishment Year')
+    plt.title('Outlet Establishment Year Distribution')
+    plt.xlabel('Year')
+    plt.ylabel('Count')
+    plt.savefig('static/images/outlet_Establishment_Year.png')
+    plt.clf()
 
 @app.route('/')
 def index():
@@ -98,10 +122,16 @@ def sales_trends():
 def top_selling_items():
     create_top_selling_items_analysis()
     return render_template('top_selling_items.html')
-@app.route('/top-selling-items')
+
+@app.route('/item-type-analysis')
 def item_type_analysis():
     create_item_type_analysis()
-    return render_template('top_selling_items.html')
+    return render_template('item_type_analysis.html')
+
+@app.route('/fat-content-analysis')
+def outlet_item_analysis():
+    fat_content_analysis()
+    return render_template('fat_content_analysis.html')
 
 @app.route('/visibility-vs-sales')
 def visibility_vs_sales():
@@ -113,14 +143,16 @@ def sales_by_location():
     create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
 
-@app.route('/top-selling-items')
-def outlet_item_analysis():
-    fat_content_analysis()
-    return render_template('top_selling_items.html')
-@app.route('/outlet-item-analysis')
-def outlet_size_distribution():
-    outlet_size_distribution()
-    return render_template('outlet-item-analysis.html')
+@app.route('/Outlet-Size-analysis')
+def Outlet_Size():
+    create_outlet_size_analysis()
+    return render_template('Outlet_Size_analysis.html')
+
+@app.route('/Outlet-Establishment-Year')
+def Outlet_Establishment_year():
+    create_Outlet_Establishment_Year()
+    return render_template('Outlet_Establishment_Year.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
