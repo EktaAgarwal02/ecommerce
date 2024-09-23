@@ -79,6 +79,7 @@ def sales_trends():
 @app.route('/top-selling-items')
 def top_selling_items():
     create_top_selling_items_analysis()
+    fat_content_analysis()
     return render_template('top_selling_items.html')
 
 @app.route('/visibility-vs-sales')
@@ -93,7 +94,7 @@ def sales_by_location():
 
 @app.route('/outlet-item-analysis')
 def outlet_item_analysis():
-    fat_content_analysis()
+   
     return render_template('outlet_item_analysis.html')
 
 if __name__ == '__main__':
