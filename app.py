@@ -121,7 +121,6 @@ def sales_trends():
 @app.route('/top-selling-items')
 def top_selling_items():
     create_top_selling_items_analysis()
-    fat_content_analysis()
     return render_template('top_selling_items.html')
 
 @app.route('/item-type-analysis')
@@ -145,8 +144,6 @@ def sales_by_location():
     return render_template('sales_by_location.html')
 
 @app.route('/outlet-item-analysis')
-def outlet_item_analysis():
-   
 def Outlet_Size():
     create_outlet_size_analysis()
     return render_template('outlet_item_analysis.html')
