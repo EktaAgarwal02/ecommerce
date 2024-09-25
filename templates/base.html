@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blinkit Sales Data Analysis</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="bg-gray-800 p-4 text-white">
-        <ul class="flex space-x-4">
-            <li><a href="/" class="hover:underline">Home</a></li>
-            <li><a href="/about" class="hover:underline">About</a></li>
-            <li><a href="/sales-trends" class="hover:underline">Sales Trends</a></li>
-            <li><a href="/top-selling-items" class="hover:underline">Top Selling Items</a></li>
-            <li><a href="/visibility-vs-sales" class="hover:underline">Visibility vs Sales</a></li>
-            <li><a href="/sales-by-location" class="hover:underline">Sales by Location</a></li>
-            <li><a href="/outlet-item-analysis" class="hover:underline">Outlet & Itmes</a></li>
-        </ul>
+    <nav class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 shadow-lg">
+        <div class="container mx-auto">
+            <ul class="flex justify-center space-x-6">
+                <li>
+                    <a href="/"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Home</a>
+                </li>
+                <li>
+                    <a href="/about"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">About</a>
+                </li>
+                <li>
+                    <a href="/sales-trends"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Sales
+                        Trends</a>
+                </li>
+                <li>
+                    <a href="/top-selling-items"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Top
+                        Selling Items</a>
+                </li>
+               
+                <li>
+                    <a href="/sales-by-location"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Sales
+                        by Location</a>
+                </li>
+                <li>
+                    <a href="/outlet-item-analysis"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Outlet
+                        & Items</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
     <div class="container mx-auto p-8">
         {% block content %}{% endblock %}
     </div>
 </body>
+
 </html>

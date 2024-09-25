@@ -65,7 +65,7 @@ def create_sales_by_location_analysis():
 
 def fat_content_analysis():
     plt.figure(figsize=(10, 6))
-    sns.histplot(df['ItemFat Content'], bins=30, kde=True)
+    sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
     plt.title('Distribution of Fat Content')
     plt.xlabel('Fat Content')
     plt.ylabel('Frequency')
@@ -144,8 +144,8 @@ def sales_by_location():
     create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
 
-@app.route('/outlet-item-analysis')
-def outlet_item_analysis():
+# @app.route('/outlet-item-analysis')
+# def outlet_item_analysis():
    
 def Outlet_Size():
     create_outlet_size_analysis()
