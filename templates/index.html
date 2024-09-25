@@ -2,867 +2,405 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
-  <title>Landing | Tailwind Starter Kit by Creative Tim</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
+    <title>Landing | Tailwind Starter Kit by Creative Tim</title>
 </head>
 
 <body class="text-gray-800 antialiased">
-  <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-      <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-        <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-          href="https://seeklogo.com/images/B/blinkit-logo-568D32C8EC-seeklogo.com.png">Blinkit</a><button
-          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-          type="button" onclick="toggleNavbar('example-collapse-navbar')">
-          <i class="text-white fas fa-bars"></i>
-        </button>
-      </div>
-      <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
-        id="example-collapse-navbar">
+    <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
+        <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+            <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                    href="https://seeklogo.com/images/B/blinkit-logo-568D32C8EC-seeklogo.com.png">Blinkit</a><button
+                    class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                    <i class="text-white fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+                id="example-collapse-navbar">
 
-        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
 
-          <li class="flex items-center">
-            <button
-              class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-4 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-              type="button" style="transition: all 0.15s ease 0s;">
-              <i class="fas fa-arrow-alt-circle-down"></i> About
-            </button>
-          </li>
+                    <li class="flex items-center">
+                        <a href="/sales-trends"
+                            class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-4 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Sales Trends
+                        </a>
+                    </li>
 
-          <li class="flex items-center"></li>
-          <button
-            class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-            type="button" style="transition: all 0.15s ease 0s;">
-            <i class="fas fa-arrow-alt-circle-down"></i> Analysis
-          </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <main>
-    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 100vh;">
-      <div class="absolute top-0 w-full h-full bg-center bg-cover"
-        style='background-image: url("https://techstory.in/wp-content/uploads/2022/08/blinkit.jpg");'>
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 "></span>
-      </div>
-      <div class="container relative mx-auto">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-            <div class="pr-12">
-              <h1 class="text-white font-semibold text-6xl">
-                Blinkit Sales Data
-              </h1>
+                    <li class="flex items-center">
+                        <a href="/top-selling-items"
+                            class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Top Items
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/sales-by-location"
+                            class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Sales Location
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/outlet-item-analysis"
+                            class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Outlet Visibility
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/visibility-vs-sales"
+                            class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Visibility vs Sales
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
+            <div class="absolute top-0 w-full h-full bg-center bg-cover"
+                style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80");'>
+                <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
+            </div>
+            <div class="container relative mx-auto">
+                <div class="items-center flex flex-wrap">
+                    <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                        <div class="pr-12">
+                            <h1 class="text-white font-semibold text-5xl">
+                                Your story starts with us.
+                            </h1>
+                            <p class="mt-4 text-lg text-gray-300">
+                                This is a simple example of a Landing Page you can build using
+                                Tailwind Starter Kit. It features multiple CSS components
+                                based on the Tailwindcss design system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+                style="height: 70px;">
+                <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                    <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+        </div>
+        <section class="pb-20 bg-gray-300 -mt-24">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap">
+                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                            <div class="px-4 py-5 flex-auto">
+                                <div
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h6 class="text-xl font-semibold">Awarded Agency</h6>
+                                <p class="mt-2 mb-4 text-gray-600">
+                                    Divide details about your product or agency work into parts.
+                                    A paragraph describing a feature will be enough.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-4/12 px-4 text-center">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                            <div class="px-4 py-5 flex-auto">
+                                <div
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
+                                    <i class="fas fa-retweet"></i>
+                                </div>
+                                <h6 class="text-xl font-semibold">Free Revisions</h6>
+                                <p class="mt-2 mb-4 text-gray-600">
+                                    Keep you user engaged by providing meaningful information.
+                                    Remember that by this time, the user is curious.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                            <div class="px-4 py-5 flex-auto">
+                                <div
+                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
+                                    <i class="fas fa-fingerprint"></i>
+                                </div>
+                                <h6 class="text-xl font-semibold">Verified Company</h6>
+                                <p class="mt-2 mb-4 text-gray-600">
+                                    Write a few lines about each one. A paragraph describing a
+                                    feature will be enough. Keep you user engaged!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center mt-32">
+                    <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                        <div
+                            class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                            <i class="fas fa-user-friends text-xl"></i>
+                        </div>
+                        <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                            Objective
+                        </h3>
+                        <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                            Analyze Sales by Location: Examine how sales vary across different locations to identify
+                            which areas contribute most to overall sales.
+                        </p>
+                        <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                            Identify Sales Trends: Detect trends in sales data over time to understand seasonal patterns
+                            and shifts in consumer behavior.
+                        </p>
+                        <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                            Evaluate Visibility vs. Sales: Assess the impact of product visibility on sales to determine
+                            how visibility affects purchasing decisions.
+                        </p>
+                        <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                            Identify Top-Selling Items: Pinpoint which products are the top sellers to understand what
+                            drives high sales and customer preferences.
+                        </p>
+                        <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                            Provide Actionable Recommendations: Develop strategies based on the analysis to optimize
+                            sales performance and improve Blinkit's market strategies.
+                        </p>
+                        <a href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+                            class="font-bold text-gray-800 mt-8"></a>
+                    </div>
+                    <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+                        <div
+                            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+                            <img alt="..." src="https://entrackr.com/storage/2023/10/Blinkit-fintrackr-800x400.jpg"
+                                class="w-full align-middle rounded-t-lg" />
+                            <blockquote class="relative p-8 mb-4">
+                                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
+                                    class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
+                                    <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current"></polygon>
+                                </svg>
+                                <h4 class="text-xl font-bold text-white">
+                                    blinkit
+                                </h4>
+                                <p class="text-md font-light mt-2 text-white">
+                                    <img src="http://digest.thegstco.com/wp-content/uploads/2023/06/2-1.png" />
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative py-20">
+            <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+                style="height: 80px;">
+                <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                    <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+            <div class="container mx-auto px-4">
+                <div class="items-center flex flex-wrap">
+                    <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+                        <img alt="..." class="max-w-full rounded-lg shadow-lg"
+                            src="https://images.softwaresuggest.com/latest_screenshots/blinkit_2.png" />
+                    </div>
+                    <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+                        <div class="md:pr-12">
+                            <div
+                                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400 ">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h6 class="text-xl font-semibold">Introduction</h6>
+                            <p class="mt-2 mb-4 text-gray-600">
+                                In the fast-paced retail industry, analyzing sales data is crucial for understanding and
+                                enhancing
+                                performance.
+                                This project focuses on Blinkit's sales data to uncover trends and patterns that drive
+                                sales success.
+                                By exploring various factors influencing sales, we aim to provide actionable insights
+                                for better
+                                decision-making.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-          </div>
+        </section>
+
+        <section class="pb-20 relative block bg-gray-900">
+            <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+                style="height: 80px;">
+                <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                    <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+            <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+                <div class="flex flex-wrap text-center justify-center">
+                    <div class="w-full lg:w-6/12 px-4">
+                        <h2 class="text-4xl font-semibold text-white">Frequently Asked Questions</h2>
+                        <br>
+                        <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+
+                        <h4 class="text-left font- text-white">What is the purpose of this analysis?</h4>
+
+                        <h6 class="text-left font- text-white">The purpose is to understand Blinkit's sales data by
+                            examining how factors like location and product characteristics affect sales, and to provide
+                            actionable insights for improving performance.</h6>
+                        <br>
+                        <h4 class="text-left font- text-white">How do you analyze sales by location?</h4>
+                        <h6 class="text-left font- text-white">We look at sales data from different store locations to
+                            see which areas have the highest and lowest sales, helping to identify regional trends and
+                            performance.</h6>
+                        <br>
+                        <h4 class="text-left font- text-white">What trends are you looking for in the sales data?</h4>
+                        <h6 class="text-left font- text-white">We analyze sales over time to spot patterns, such as
+                            seasonal variations or long-term changes, that can help predict future sales and adjust
+                            strategies accordingly.<h6>
+                                <br>
+                                <h4 class="text-left font- text-white">How does visibility affect sales?</h4>
+                                <h6 class="text-left font- text-white">We compare product visibility with sales figures
+                                    to see if more visible products sell better and determine how important visibility
+                                    is for driving sales.</h6>
+                                <br>
+                                <h4 class="text-left font- text-white">What will the analysis reveal about top-selling
+                                    items?</h4>
+                                <h6 class="text-left font- text-white">The analysis will identify which products are
+                                    selling the most, helping to understand what drives high sales and which items are
+                                    most popular.</h6>
+                                </p>
+                    </div>
+                </div>
+
+        </section>
+        <section class="relative block py-24 lg:pt-0 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+                    <div class="w-full lg:w-6/12 px-4">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+            style="height: 80px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
         </div>
-      </div>
-      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-        style="height: 70px;">
-        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-      <section class="pb-20 bg-gray-300 -mt-24">
         <div class="container mx-auto px-4">
-          <div class="flex flex-wrap">
-            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-              >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400 "
-                  >
-                    <i class="fas fa-award"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold">Introduction</h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    In the fast-paced retail industry, analyzing sales data is crucial for understanding and enhancing performance. 
-                    This project focuses on Blinkit's sales data to uncover trends and patterns that drive sales success. 
-                    By exploring various factors influencing sales, we aim to provide actionable insights for better decision-making.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-              >
-                <div class="px-4 py-5 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
-                  >
-                    <i class="fas fa-retweet"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold"> </h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    We look at different aspects related to stores and products to understand their impact on sales outcomes.
-                    Our analysis helps in identifying key elements that contribute to successful sales strategies and highlights areas that need improvement.
-
-
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
-              >
-                <div class="px-4 py-16 flex-auto">
-                  <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
-                  >
-                    <i class="fas fa-fingerprint"></i>
-                  </div>
-                  <h6 class="text-xl font-semibold"> </h6>
-                  <p class="mt-2 mb-4 text-gray-600">
-                    Our goal is to deliver a clear and comprehensive view of the sales landscape,
-                    offering recommendations that can help Blinkit boost customer satisfaction and drive growth.
-
-
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-wrap items-center mt-32">
-            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-              <div
-                class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
-              >
-                <i class="fas fa-user-friends text-xl"></i>
-              </div>
-              <h3 class="text-3xl mb-2 font-semibold leading-normal">
-              Objective 
-              </h3>
-              <p
-                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-              >
-              Analyze Sales by Location: Examine how sales vary across different locations to identify which areas contribute most to overall sales.
-              </p>
-              <p
-              class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-              >
-              Identify Sales Trends: Detect trends in sales data over time to understand seasonal patterns and shifts in consumer behavior.  
-              </p>
-              <p
-              class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-              >
-              Evaluate Visibility vs. Sales: Assess the impact of product visibility on sales to determine how visibility affects purchasing decisions.
-              </p>
-              <p
-                class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-              >
-              Identify Top-Selling Items: Pinpoint which products are the top sellers to understand what drives high sales and customer preferences.
-              </p>
-              <p
-              class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700"
-              >
-              Provide Actionable Recommendations: Develop strategies based on the analysis to optimize sales performance and improve Blinkit's market strategies.
-              </p>
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-                class="font-bold text-gray-800 mt-8"
-                ></a
-              >
-            </div>
-            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600"
-              >
-                <img
-                  alt="..."
-                  src="https://entrackr.com/storage/2023/10/Blinkit-fintrackr-800x400.jpg"
-                  class="w-full align-middle rounded-t-lg"
-                />
-                <blockquote class="relative p-8 mb-4">
-                  <svg
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 583 95"
-                    class="absolute left-0 w-full block"
-                    style="height: 95px; top: -94px;"
-                  >
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      class="text-pink-600 fill-current"
-                    ></polygon>
-                  </svg>
-                  <h4 class="text-xl font-bold text-white">
-                    blinkit
-                  </h4>
-                  <p class="text-md font-light mt-2 text-white"
-                  >
-                    <img
-                    src="http://digest.thegstco.com/wp-content/uploads/2023/06/2-1.png"
-                    />
-                  </p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="relative py-20">
-        <div
-          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style="height: 80px;"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-white fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div class="container mx-auto px-4">
-          <div class="items-center flex flex-wrap">
-            <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
-              <img
-                alt="..."
-                class="max-w-full rounded-lg shadow-lg"
-                src="https://images.softwaresuggest.com/latest_screenshots/blinkit_2.png"
-              />
-            </div>
-            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
-                <div
-                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400 ">
-                  <i class="fas fa-award"></i>
-                </div>
-                <h6 class="text-xl font-semibold">Introduction</h6>
-                <p class="mt-2 mb-4 text-gray-600">
-                  In the fast-paced retail industry, analyzing sales data is crucial for understanding and enhancing
-                  performance.
-                  This project focuses on Blinkit's sales data to uncover trends and patterns that drive sales success.
-                  By exploring various factors influencing sales, we aim to provide actionable insights for better
-                  decision-making.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-4/12 px-4 text-center">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div class="px-4 py-5 flex-auto">
-                <div
-                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                  <i class="fas fa-retweet"></i>
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-2-800x800.jpg"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Sales_trends</h5>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-3-800x800.jpg"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Top_Selling_Items</h5>
-                  
-                </div>
-              </div>
-            </div>
-            <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-              <div class="px-6">
-                <img
-                  alt="..."
-                  src="./assets/img/team-4-470x470.png"
-                  class="shadow-lg rounded-full max-w-full mx-auto"
-                  style="max-width: 120px;"
-                />
-                <div class="pt-6 text-center">
-                  <h5 class="text-xl font-bold">Visibility_Vs_Sales</h5>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pb-20 relative block bg-gray-900">
-        <div
-          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style="height: 80px;"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-900 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-          <div class="flex flex-wrap text-center justify-center">
-            <div class="w-full lg:w-6/12 px-4">
-              <h2 class="text-4xl font-semibold text-white">Frequently Asked Questions</h2>
-              <br>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                
-                <h4 class="text-left font- text-white">What is the purpose of this analysis?</h4>
-                
-<h6 class="text-left font- text-white">The purpose is to understand Blinkit's sales data by examining how factors like location and product characteristics affect sales, and to provide actionable insights for improving performance.</h6>
-<br>
-<h4 class="text-left font- text-white">How do you analyze sales by location?</h4>
-<h6 class="text-left font- text-white">We look at sales data from different store locations to see which areas have the highest and lowest sales, helping to identify regional trends and performance.</h6>
-<br>
-<h4 class="text-left font- text-white">What trends are you looking for in the sales data?</h4>
-<h6 class="text-left font- text-white">We analyze sales over time to spot patterns, such as seasonal variations or long-term changes, that can help predict future sales and adjust strategies accordingly.<h6>
-<br> 
-<h4 class="text-left font- text-white">How does visibility affect sales?</h4>
-<h6 class="text-left font- text-white">We compare product visibility with sales figures to see if more visible products sell better and determine how important visibility is for driving sales.</h6>
-<br>
-<h4 class="text-left font- text-white">What will the analysis reveal about top-selling items?</h4>
-<h6 class="text-left font- text-white">The analysis will identify which products are selling the most, helping to understand what drives high sales and which items are most popular.</h6>
-              </p>
-            </div>
-          </div>
-          
-      </section>
-      <!-- Contact -->
-<div class="max-w-7xl px-4 lg:px-6 lg:px-8 py-12 lg:py-24 mx-auto">
-  <div class="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
-    <h1 class="font-medium text-black text-2xl sm:text-4xl">
-      Contacts
-    </h1>
-  </div>
-
-
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-              <div class="px-4 py-16 flex-auto">
-                <div
-                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-                  <i class="fas fa-fingerprint"></i>
-                </div>
-                <h6 class="text-xl font-semibold">Verified Company</h6>
-                <p class="mt-2 mb-4 text-gray-600">
-                  Our goal is to deliver a clear and comprehensive view of the sales landscape,
-                  offering recommendations that can help Blinkit boost customer satisfaction and drive growth.
-
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex flex-wrap items-center mt-32">
-          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-            <div
-              class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-              <i class="fas fa-user-friends text-xl"></i>
-            </div>
-            <h3 class="text-3xl mb-2 font-semibold leading-normal">
-              Objective
-            </h3>
-            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-              Analyze Sales by Location: Examine how sales vary across different locations to identify which areas
-              contribute most to overall sales.
-            </p>
-            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-              Identify Sales Trends: Detect trends in sales data over time to understand seasonal patterns and shifts in
-              consumer behavior.
-            </p>
-            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-              Evaluate Visibility vs. Sales: Assess the impact of product visibility on sales to determine how
-              visibility affects purchasing decisions.
-            </p>
-            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-              Identify Top-Selling Items: Pinpoint which products are the top sellers to understand what drives high
-              sales and customer preferences.
-            </p>
-            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-              Provide Actionable Recommendations: Develop strategies based on the analysis to optimize sales performance
-              and improve Blinkit's market strategies.
-            </p>
-            <a href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-              class="font-bold text-gray-800 mt-8"></a>
-          </div>
-          <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
-            <div
-              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-              <img alt="..." src="https://entrackr.com/storage/2023/10/Blinkit-fintrackr-800x400.jpg"
-                class="w-full align-middle rounded-t-lg" />
-              <blockquote class="relative p-8 mb-4">
-                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                  class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
-                  <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current"></polygon>
-                </svg>
-                <h4 class="text-xl font-bold text-white">
-                  blinkit
-                </h4>
-                <p class="text-md font-light mt-2 text-white">
-                  <img src="http://digest.thegstco.com/wp-content/uploads/2023/06/2-1.png" />
-                </p>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="relative py-20">
-      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-        style="height: 80px;">
-        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-          <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-      <div class="container mx-auto px-4">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
-            <img alt="..." class="max-w-full rounded-lg shadow-lg"
-              src="https://images.softwaresuggest.com/latest_screenshots/blinkit_2.png" />
-          </div>
-          <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-            <div class="md:pr-12">
-              <div
-                class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
-                <i class="fas fa-rocket text-xl"></i>
-              </div>
-              <h3 class="text-3xl font-semibold">Feature</h3>
-
-              <ul class="list-none mt-6">
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
-                          class="fas fa-fingerprint"></i></span>
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-700">
+                        Find us on any of these platforms, we respond 1-2 business days.
+                    </h5>
+                    <div class="mt-6">
+                        <button
+                            class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                            type="button">
+                            <i class="flex fab fa-twitter"></i></button><button
+                            class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                            type="button">
+                            <i class="flex fab fa-facebook-square"></i></button><button
+                            class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                            type="button">
+                            <i class="flex fab fa-dribbble"></i></button><button
+                            class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
+                            type="button">
+                            <i class="flex fab fa-github"></i>
+                        </button>
                     </div>
-                    <div>
-                      <h4 class="text-gray-600">
-                        Sales by Location: Tracks and visualizes sales data across different store locations to identify
-                        regional performance.
-                      </h4>
-                    </div>
-                  </div>
-                </li>
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
-                          class="fas fa-fingerprint"></i></span>
-                    </div>
-                    <div>
-                      <h4 class="text-gray-600">
-                        Sales Trends Over Time: Analyzes historical sales data to identify patterns, trends, and
-                        seasonal variations.
-                      </h4>
-                    </div>
-                  </div>
-                </li>
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
-                          class="fab fa-html5"></i></span>
-                    </div>
-                    <div>
-                      <h4 class="text-gray-600">Visibility vs. Sales Analysis: Compares product visibility metrics with
-                        sales figures to determine how visibility affects sales performance.</h4>
-                    </div>
-                  </div>
-                </li>
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i
-                          class="far fa-paper-plane"></i></span>
-                    </div>
-                    <div>
-                      <h4 class="text-gray-600">Top-Selling Items: Identifies and ranks products based on sales volume
-                        to highlight popular and high-performing items.</h4>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="pt-20 pb-48">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-center text-center mb-24">
-          <div class="w-full lg:w-6/12 px-4">
-            <h2 class="text-4xl font-semibold">Analysis</h2>
-            <p class="text-lg leading-relaxed m-4 text-gray-600">
-              According
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-wrap">
-          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-            <div class="px-6">
-              <img alt="..." src="./assets/img/team-1-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;" />
-              <a href="/sales-trends" class="pt-6 text-center">
-                <h5 class="text-xl font-bold">Sales Trends</h5>
-
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-            <div class="px-6">
-              <img alt="..." src="./assets/img/team-2-800x800.jpg" class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;" />
-              <a href="/top-selling-items" class="pt-6 text-center">
-                <h5 class="text-xl font-bold">Top Selling Items</h5>
-
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-            <div class="px-6">
-              <img alt="..." src="./assets/img/team-4-470x470.png" class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;" />
-              <a href="/sales-by-location" class="pt-6 text-center">
-                <h5 class="text-xl font-bold">Sales By Location</h5>
-
-              </a>
-            </div>
-          </div>
-          <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-            <div class="px-6">
-              <img alt="..." src="./assets/img/team-4-470x470.png" class="shadow-lg rounded-full max-w-full mx-auto"
-                style="max-width: 120px;" />
-              <a href="/outlet-item-analysis" class="pt-6 text-center">
-                <h5 class="text-xl font-bold">Outlet & Items</h5>
-              </a>
-            </div>
-          </div>
-        </div>
-    </section>
-    <section class="pb-20 relative block bg-gray-900">
-      <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-        style="height: 80px;">
-        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-          version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-          <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-      <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-        <div class="flex flex-wrap text-center justify-center">
-          <div class="w-full lg:w-6/12 px-4">
-            <h2 class="text-4xl font-semibold text-white">Frequently Asked Questions</h2>
-            <br>
-            <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-
-            <h4 class="text-left font- text-white">What is the purpose of this analysis?</h4>
-
-            <h6 class="text-left font- text-white">The purpose is to understand Blinkit's sales data by examining how
-              factors like location and product characteristics affect sales, and to provide actionable insights for
-              improving performance.</h6>
-            <br>
-            <h4 class="text-left font- text-white">How do you analyze sales by location?</h4>
-            <h6 class="text-left font- text-white">We look at sales data from different store locations to see which
-              areas have the highest and lowest sales, helping to identify regional trends and performance.</h6>
-            <br>
-            <h4 class="text-left font- text-white">What trends are you looking for in the sales data?</h4>
-            <h6 class="text-left font- text-white">We analyze sales over time to spot patterns, such as seasonal
-              variations or long-term changes, that can help predict future sales and adjust strategies accordingly.<h6>
-                <br>
-                <h4 class="text-left font- text-white">How does visibility affect sales?</h4>
-                <h6 class="text-left font- text-white">We compare product visibility with sales figures to see if more
-                  visible products sell better and determine how important visibility is for driving sales.</h6>
-                <br>
-                <h4 class="text-left font- text-white">What will the analysis reveal about top-selling items?</h4>
-                <h6 class="text-left font- text-white">The analysis will identify which products are selling the most,
-                  helping to understand what drives high sales and which items are most popular.</h6>
-                </p>
-          </div>
-        </div>
-        <div class="flex flex-wrap mt-12 justify-center">
-          <div class="w-full lg:w-3/12 px-4 text-center">
-            <div
-              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-              <i class="fas fa-medal text-xl"></i>
-            </div>
-            <h6 class="text-xl mt-5 font-semibold text-white">
-              Excelent Services
-            </h6>
-            <p class="mt-2 mb-4 text-gray-500">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-          <div class="w-full lg:w-3/12 px-4 text-center">
-            <div
-              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-              <i class="fas fa-poll text-xl"></i>
-            </div>
-            <h5 class="text-xl mt-5 font-semibold text-white">
-              Grow your market
-            </h5>
-            <p class="mt-2 mb-4 text-gray-500">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-          <div class="w-full lg:w-3/12 px-4 text-center">
-            <div
-              class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-              <i class="fas fa-lightbulb text-xl"></i>
-            </div>
-            <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>
-            <p class="mt-2 mb-4 text-gray-500">
-              Some quick example text to build on the card title and make up
-              the bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact -->
-    <div class="max-w-7xl px-4 lg:px-6 lg:px-8 py-12 lg:py-24 mx-auto">
-      <div class="mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
-        <h1 class="font-medium text-black text-2xl sm:text-4xl">
-          Contacts
-        </h1>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12">
-        <div class="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden bg-gray-100 rounded-2xl">
-
-        </div>
-        <!-- End Col -->
-
-        <div class="space-y-8 lg:space-y-16">
-          <div>
-            <h3 class="mb-5 font-semibold text-black">
-              Our address
-            </h3>
-
-            <!-- Grid -->
-            <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-              <div class="flex gap-4">
-                <svg class="shrink-0 size-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-
-                <div class="grow">
-                  <p class="text-sm text-gray-600">
-                    India
-                  </p>
-                  <address class="mt-1 text-black not-italic">
-                    300 Bath Street, Tay House<br>
-                    Glasgow G2 4JR
-                  </address>
                 </div>
-              </div>
-            </div>
-            <!-- End Grid -->
-          </div>
-
-          <div>
-            <h3 class="mb-5 font-semibold text-black">
-              Our contacts
-            </h3>
-
-            <!-- Grid -->
-            <div class="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-              <div class="flex gap-4">
-                <svg class="shrink-0 size-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path
-                    d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z">
-                  </path>
-                  <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"></path>
-                </svg>
-
-                <div class="grow">
-                  <p class="text-sm text-gray-600">
-                    Email us
-                  </p>
-                  <p>
-                    <a class="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black"
-                      href="mailto:example@site.so">
-                      hello@blinkit.so
-                    </a>
-                  </p>
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://www.creative-tim.com/presentation">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://blog.creative-tim.com">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://www.github.com/creativetimofficial">Github</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://www.creative-tim.com/bootstrap-themes/free">Free Products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other
+                                Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT
+                                        License</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://creative-tim.com/terms">Terms &amp; Conditions</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://creative-tim.com/privacy">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                                        href="https://creative-tim.com/contact-us">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div class="flex gap-4">
-                <svg class="shrink-0 size-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-
-                <div class="grow">
-                  <p class="text-sm text-gray-600">
-                    Call us
-                  </p>
-                  <p>
-                    <a class="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black"
-                      href="mailto:example@site.so">
-                      +44 222 777-000
-                    </a>
-                  </p>
+            </div>
+            <hr class="my-6 border-gray-400" />
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-600 font-semibold py-1">
+                        Copyright © 2019 Tailwind Starter Kit by
+                        <a href="https://www.creative-tim.com" class="text-gray-600 hover:text-gray-900">Creative
+                            Tim</a>.
+                    </div>
                 </div>
-              </div>
             </div>
-            <!-- End Grid -->
-          </div>
         </div>
-        <!-- End Col -->
-      </div>
-    </div>
-    <!-- End Contact -->
-  </main>
-  <footer class="relative bg-gray-300 pt-8 pb-6">
-    <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-      style="height: 80px;">
-      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-        version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-        <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-    <div class="container mx-auto px-4">
-      <div class="flex flex-wrap">
-        <div class="w-full lg:w-6/12 px-4">
-          <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
-          <h5 class="text-lg mt-0 mb-2 text-gray-700">
-            Find us on any of these platforms, we respond 1-2 business days.
-          </h5>
-          <div class="mt-6">
-            <button
-              class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-              type="button">
-              <i class="flex fab fa-twitter"></i></button><button
-              class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-              type="button">
-              <i class="flex fab fa-facebook-square"></i></button><button
-              class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-              type="button">
-              <i class="flex fab fa-dribbble"></i></button><button
-              class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-              type="button">
-              <i class="flex fab fa-github"></i>
-            </button>
-          </div>
-        </div>
-        <div class="w-full lg:w-6/12 px-4">
-          <div class="flex flex-wrap items-top mb-6">
-            <div class="w-full lg:w-4/12 px-4 ml-auto">
-              <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
-              <ul class="list-unstyled">
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://www.creative-tim.com/presentation">About Us</a>
-                </li>
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://blog.creative-tim.com">Blog</a>
-                </li>
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://www.github.com/creativetimofficial">Github</a>
-                </li>
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://www.creative-tim.com/bootstrap-themes/free">Free Products</a>
-                </li>
-              </ul>
-            </div>
-            <div class="w-full lg:w-4/12 px-4">
-              <span class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
-              <ul class="list-unstyled">
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT
-                    License</a>
-                </li>
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://creative-tim.com/terms">Terms &amp; Conditions</a>
-                </li>
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://creative-tim.com/privacy">Privacy Policy</a>
-                </li>
-                <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                    href="https://creative-tim.com/contact-us">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="my-6 border-gray-400" />
-      <div class="flex flex-wrap items-center md:justify-between justify-center">
-        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-          <div class="text-sm text-gray-600 font-semibold py-1">
-            Copyright © 2019 Tailwind Starter Kit by
-            <a href="https://www.creative-tim.com" class="text-gray-600 hover:text-gray-900">Creative Tim</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 <script>
-  function toggleNavbar(collapseID) {
-    document.getElementById(collapseID).classList.toggle("hidden");
-    document.getElementById(collapseID).classList.toggle("block");
-  }
+    function toggleNavbar(collapseID) {
+        document.getElementById(collapseID).classList.toggle("hidden");
+        document.getElementById(collapseID).classList.toggle("block");
+    }
 </script>
 
 </html>
