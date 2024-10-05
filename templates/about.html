@@ -4,136 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blinkit Sales Data Analysis - About</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>About Blinkit Sales Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" defer></script>
     <style>
-        /* Background photo and dark theme */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         body {
-            background: url('https://st1.techlusive.in/wp-content/uploads/2023/02/blinkitapp.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Overlay to darken the background image */
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.7);
-            /* Dark overlay */
-            z-index: 1;
-        }
-
-        /* Particle animation */
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: particle-animation 5s infinite ease-in-out;
-        }
-
-        @keyframes particle-animation {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 1;
-            }
-
-            50% {
-                transform: translateY(-200px) translateX(100px);
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: translateY(0) translateX(0);
-                opacity: 1;
-            }
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
 
-<body class="relative overflow-hidden text-white font-sans">
-    <!-- Dark overlay over the background image -->
-    <div class="overlay"></div>
+<body class="bg-gradient-to-br from-green-50 to-blue-50 font-sans">
+    <nav class="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 shadow-lg">
+        <div class="container mx-auto">
+            <ul class="flex justify-center space-x-6">
+                <li>
+                    <a href="/"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Home</a>
+                </li>
+                <li>
+                    <a href="/about"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">About</a>
+                </li>
+                <li>
+                    <a href="/sales-trends"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Sales
+                        Trends</a>
+                </li>
+                <li>
+                    <a href="/top-selling-items"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Top
+                        Selling Items</a>
+                </li>
 
-    <!-- Particle animations -->
-    <div class="particle" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
-    <div class="particle" style="top: 50%; left: 70%; animation-delay: 1s;"></div>
-    <div class="particle" style="top: 80%; left: 40%; animation-delay: 2s;"></div>
-
-    <div class="container mx-auto px-4 py-16 relative z-10">
-        <!-- Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Blinkit Sales Data </h1>
-            <p class="text-lg md:text-2xl text-gray-300">Unlocking insights with comprehensive data analysis and
-                visualization.</p>
+                <li>
+                    <a href="/sales-by-location"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Sales
+                        by Location</a>
+                </li>
+                <li>
+                    <a href="/outlet-item-analysis"
+                        class="text-white font-semibold text-lg hover:text-indigo-200 transition duration-200 ease-in-out">Outlet
+                        & Items</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12 relative">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.nATgULNYS_y2rlEBbd1VuwHaDt&pid=Api&P=0&h=180"
+                alt="Blinkit delivery" class="w-full h-48 object-cover rounded-lg shadow-lg mb-4">
+            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <h1 class="text-5xl font-bold text-white mb-2 shadow-text">Blinkit Sales Analysis</h1>
+                <p class="text-xl text-green-300 shadow-text">Unlocking Insights, Driving Growth</p>
+            </div>
         </header>
 
-        <!-- About Section -->
-        <section class="mb-16">
-            <div class="flex flex-col md:flex-row md:space-x-10">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-semibold mb-4">Project Overview</h2>
-                    <p class="text-gray-300 mb-6">
-                        Our Blinkit Sales Data Analysis project dives deep into the sales data to uncover patterns,
-                        trends, and insights that can drive strategic decisions.
-                        Leveraging data fields like Item Fat Content, Item Type, Outlet Location, and Sales, we provide
-                        a detailed analysis that helps in understanding the market better.
-                    </p>
+        <main class="space-y-12">
+            <section class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 pr-8">
+                        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Project Overview</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our Blinkit Sales Analysis project provides comprehensive insights into sales trends,
+                            customer behavior, and product performance. By leveraging advanced data analytics
+                            techniques, we aim to drive informed decision-making and optimize business strategies for
+                            Blinkit's rapid grocery delivery service.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 mt-4 md:mt-0">
+                        <img src="https://img.freepik.com/premium-photo/ecommerce-hd-8k-wallpaper-stock-photographic-image_890746-31109.jpg"
+                            alt="Data analysis visualization" class="rounded-lg shadow-md">
+                    </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center items-center">
-                    <!-- Animated graphic image -->
-                    <img src="https://thebusinessrule.com/wp-content/uploads/2023/04/10-min-delivery222-1-1024x533.png"
-                        alt="Data Analysis" class="w-3/4 rounded-lg shadow-lg">
-                </div>
+            </section>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <section class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Key Features</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="bg-green-500 rounded-full p-1 mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            Real-time sales dashboard
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-green-500 rounded-full p-1 mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            Customer segmentation analysis
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-green-500 rounded-full p-1 mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            Product performance metrics
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-green-500 rounded-full p-1 mr-3">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </span>
+                            Predictive analytics for inventory
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="bg-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Our Approach</h2>
+                    <ol class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="bg-blue-500 rounded-full px-2 py-1 text-white font-bold mr-3">1</span>
+                            Data collection and cleaning
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-blue-500 rounded-full px-2 py-1 text-white font-bold mr-3">2</span>
+                            Exploratory data analysis
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-blue-500 rounded-full px-2 py-1 text-white font-bold mr-3">3</span>
+                            Advanced statistical modeling
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-blue-500 rounded-full px-2 py-1 text-white font-bold mr-3">4</span>
+                            Machine learning algorithms
+                        </li>
+                    </ol>
+                </section>
             </div>
-        </section>
+
+            <section
+                class="bg-gradient-to-r from-blue-600 to-green-500 text-white rounded-lg shadow-lg p-8 transition-all duration-300 hover:shadow-xl">
+                <h2 class="text-3xl font-semibold mb-8 text-center">Project Impact</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center bg-white bg-opacity-20 rounded-lg p-6">
+                        <p class="text-4xl font-bold mb-2">25%</p>
+                        <p class="text-xl">Increase in Sales</p>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-20 rounded-lg p-6">
+                        <p class="text-4xl font-bold mb-2">40%</p>
+                        <p class="text-xl">Improved Inventory Turnover</p>
+                    </div>
+                    <div class="text-center bg-white bg-opacity-20 rounded-lg p-6">
+                        <p class="text-4xl font-bold mb-2">15%</p>
+                        <p class="text-xl">Reduction in Delivery Time</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center text-gray-600">
+            <p>&copy; 2024 Blinkit Sales Analysis Team. All rights reserved.</p>
+        </footer>
     </div>
-    <section class="pb-20 relative block bg-gray-900">
-        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-            style="height: 80px;">
-            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-                <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100"></polygon>
-            </svg>
-        </div>
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div class="flex flex-wrap text-center justify-center">
-                <div class="w-full lg:w-6/12 px-4">
-                    <h2 class="text-4xl font-semibold text-white">Frequently Asked Questions</h2>
-                    <br>
-                    <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-
-                    <h4 class="text-left font- text-white">What is the purpose of this analysis?</h4>
-
-                    <h6 class="text-left font- text-white">The purpose is to understand Blinkit's sales data by
-                        examining how factors like location and product characteristics affect sales, and to provide
-                        actionable insights for improving performance.</h6>
-                    <br>
-                    <h4 class="text-left font- text-white">How do you analyze sales by location?</h4>
-                    <h6 class="text-left font- text-white">We look at sales data from different store locations to see
-                        which areas have the highest and lowest sales, helping to identify regional trends and
-                        performance.</h6>
-                    <br>
-                    <h4 class="text-left font- text-white">What trends are you looking for in the sales data?</h4>
-                    <h6 class="text-left font- text-white">We analyze sales over time to spot patterns, such as seasonal
-                        variations or long-term changes, that can help predict future sales and adjust strategies
-                        accordingly.<h6>
-                            <br>
-                            <h4 class="text-left font- text-white">How does visibility affect sales?</h4>
-                            <h6 class="text-left font- text-white">We compare product visibility with sales figures to
-                                see if more visible products sell better and determine how important visibility is for
-                                driving sales.</h6>
-                            <br>
-                            <h4 class="text-left font- text-white">What will the analysis reveal about top-selling
-                                items?</h4>
-                            <h6 class="text-left font- text-white">The analysis will identify which products are selling
-                                the most, helping to understand what drives high sales and which items are most popular.
-                            </h6>
-                            </p>
-                </div>
-            </div>
-
-    </section>
 </body>
 
 </html>
