@@ -44,6 +44,7 @@ def create_item_type_analysis():
     plt.savefig('static/images/Item_Type_analysis.png')
     plt.clf()
 
+
 # Item Visibility vs Sales
 def create_visibility_vs_sales_analysis():
     plt.scatter(df['Item Visibility'], df['Sales'], alpha=0.5)
@@ -63,6 +64,7 @@ def create_sales_by_location_analysis():
     plt.savefig('static/images/sales_by_location.png')
     plt.clf()
 
+# Fat Content Analysis
 def fat_content_analysis():
     plt.figure(figsize=(10, 6))
     sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
@@ -115,43 +117,35 @@ def about():
 
 @app.route('/sales-trends')
 def sales_trends():
-    create_sales_trends_analysis()
+    # create_sales_trends_analysis()
     return render_template('sales_trends.html')
 
 @app.route('/top-selling-items')
 def top_selling_items():
-    create_top_selling_items_analysis()
+    # create_top_selling_items_analysis()
     return render_template('top_selling_items.html')
 
 @app.route('/item-type-analysis')
 def item_type_analysis():
-    create_item_type_analysis()
+    # create_item_type_analysis()
     return render_template('item_type_analysis.html')
 
 @app.route('/top-selling-items')
 def outlet_item_analysis():
-    fat_content_analysis()
+    # fat_content_analysis()
     return render_template('top_selling_items.html')
 
-@app.route('/visibility-vs-sales')
-def visibility_vs_sales():
-    create_visibility_vs_sales_analysis()
-    return render_template('visibility_vs_sales.html')
 
 @app.route('/sales-by-location')
 def sales_by_location():
-    create_sales_by_location_analysis()
+    # create_sales_by_location_analysis()
     return render_template('sales_by_location.html')
 
 @app.route('/outlet-item-analysis')
 def Outlet_Size():
-    create_outlet_size_analysis()
+    # create_outlet_size_analysis()
     return render_template('outlet_item_analysis.html')
 
-@app.route('/outlet-item-analysis')
-def Outlet_Establishment_Year():
-    create_Outlet_Establishment_Year()
-    return render_template('outlet_item_analysis.html')
 
 
 if __name__ == '__main__':
