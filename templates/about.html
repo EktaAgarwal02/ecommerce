@@ -52,6 +52,7 @@
 </head>
 
 <body class="relative overflow-hidden text-white font-sans">
+    
     <!-- Dark overlay over the background image -->
     <div class="overlay"></div>
 
@@ -60,12 +61,70 @@
     <div class="particle" style="top: 50%; left: 70%; animation-delay: 1s;"></div>
     <div class="particle" style="top: 80%; left: 40%; animation-delay: 2s;"></div>
 
+    <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3">
+        <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+            <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+                <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                    href="https://seeklogo.com/images/B/blinkit-logo-568D32C8EC-seeklogo.com.png">Blinkit</a>
+                <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                    type="button" onclick="toggleNavbar('example-collapse-navbar')">
+                    <i class="text-white fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+                id="example-collapse-navbar">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <li class="flex items-center">
+                        <a href="/" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Home
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/sales-trends" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Sales Trends
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/top-selling-items" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Top Items
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/sales-by-location" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Sales Location
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/outlet-item-analysis" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Outlet Visibility
+                        </a>
+                    </li>
+
+                    <li class="flex items-center">
+                        <a href="/visibility-vs-sales" class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+                            style="transition: all 0.15s ease 0s;">
+                            <i class="fas fa-arrow-alt-circle-down"></i> Visibility vs Sales
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mx-auto px-4 py-16 relative z-10">
         <!-- Header Section -->
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Blinkit Sales Data </h1>
-            <p class="text-lg md:text-2xl text-gray-300">Unlocking insights with comprehensive data analysis and
-                visualization.</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Blinkit Sales Data</h1>
+            <p class="text-lg md:text-2xl text-gray-300">Unlocking insights with comprehensive data analysis and visualization.</p>
         </header>
 
         <!-- About Section -->
@@ -74,66 +133,43 @@
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-semibold mb-4">Project Overview</h2>
                     <p class="text-gray-300 mb-6">
-                        Our Blinkit Sales Data Analysis project dives deep into the sales data to uncover patterns,
-                        trends, and insights that can drive strategic decisions.
-                        Leveraging data fields like Item Fat Content, Item Type, Outlet Location, and Sales, we provide
-                        a detailed analysis that helps in understanding the market better.
+                        Our Blinkit Sales Data Analysis project dives deep into the sales data to uncover patterns, trends, and insights that can drive strategic decisions.
+                        Leveraging data fields like Item Fat Content, Item Type, Outlet Location, and Sales, we provide a detailed analysis that helps in understanding the market better.
                     </p>
                 </div>
+                
                 <div class="md:w-1/2 flex justify-center items-center">
                     <!-- Animated graphic image -->
                     <img src="https://thebusinessrule.com/wp-content/uploads/2023/04/10-min-delivery222-1-1024x533.png"
                         alt="Data Analysis" class="w-3/4 rounded-lg shadow-lg">
                 </div>
             </div>
-        </section>
-    </div>
-    <section class="pb-20 relative block bg-gray-900">
-        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-            style="height: 80px;">
-            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-                <polygon class="text-gray-900 fill-current" points="2560 0 2560 100 0 100"></polygon>
-            </svg>
-        </div>
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div class="flex flex-wrap text-center justify-center">
-                <div class="w-full lg:w-6/12 px-4">
-                    <h2 class="text-4xl font-semibold text-white">Frequently Asked Questions</h2>
-                    <br>
-                    <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-
-                    <h4 class="text-left font- text-white">What is the purpose of this analysis?</h4>
-
-                    <h6 class="text-left font- text-white">The purpose is to understand Blinkit's sales data by
-                        examining how factors like location and product characteristics affect sales, and to provide
-                        actionable insights for improving performance.</h6>
-                    <br>
-                    <h4 class="text-left font- text-white">How do you analyze sales by location?</h4>
-                    <h6 class="text-left font- text-white">We look at sales data from different store locations to see
-                        which areas have the highest and lowest sales, helping to identify regional trends and
-                        performance.</h6>
-                    <br>
-                    <h4 class="text-left font- text-white">What trends are you looking for in the sales data?</h4>
-                    <h6 class="text-left font- text-white">We analyze sales over time to spot patterns, such as seasonal
-                        variations or long-term changes, that can help predict future sales and adjust strategies
-                        accordingly.<h6>
-                            <br>
-                            <h4 class="text-left font- text-white">How does visibility affect sales?</h4>
-                            <h6 class="text-left font- text-white">We compare product visibility with sales figures to
-                                see if more visible products sell better and determine how important visibility is for
-                                driving sales.</h6>
-                            <br>
-                            <h4 class="text-left font- text-white">What will the analysis reveal about top-selling
-                                items?</h4>
-                            <h6 class="text-left font- text-white">The analysis will identify which products are selling
-                                the most, helping to understand what drives high sales and which items are most popular.
-                            </h6>
-                            </p>
+            <div class="pt-6 w-12 md:w-4/12 px-4 text-center">
+                <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                    <div class="px-4 py-5 flex-auto">
+                        <img src="https://www.bridgemi.com/sites/default/files/hero_images/grocery_delivery.jpg" alt="Card Image" class="w-full h-auto rounded-lg" />
+                    </div>
                 </div>
             </div>
+        </section>
 
-    </section>
+        <!-- New Text Section: Project Features -->
+        <section class="mb-16">
+            <div class="bg-gray-800 rounded-lg p-8 shadow-lg">
+                <h2 class="text-3xl font-semibold text-white mb-4">Key Features of Our Analysis</h2>
+                <p class="text-gray-300 mb-4">
+                    Our Blinkit Sales Data Analysis is built on key data-driven features designed to provide actionable insights:
+                </p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2">
+                    <li>Sales Performance by Location: Identifying geographical trends and customer preferences.</li>
+                    <li>Top-selling Products: Insights into consumer preferences and demand patterns.</li>
+                    <li>Sales vs Visibility: Analyzing the correlation between product visibility and sales performance.</li>
+                    <li>Outlet-specific Analysis: Detailed analysis of outlets based on size, location, and establishment year.</li>
+                    <li>Data-driven Recommendations: Tailored insights to improve operational efficiency and boost sales.</li>
+                </ul>
+            </div>
+        </section>
+
 </body>
 
 </html>
