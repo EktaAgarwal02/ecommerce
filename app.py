@@ -25,12 +25,12 @@ def create_sales_trends_analysis():
 
 
 # Top 10 Selling Items
-def create_top_selling_items_analysis():
-    top_items = df.groupby('Item Identifier')['Sales'].sum().sort_values(ascending=False).head(10)
-    top_items.plot(kind='bar', figsize=(10, 6))
-    plt.title('Top 10 Best-Selling Items')
-    plt.xlabel('Item Identifier')
-    plt.ylabel('Total Sales')
+def create_top_selling_items():
+    top_items = df.groupby('Item Type')['Sales'].sum().sort_values(ascending=False).head(10)
+    top_items.plot(kind='barh', figsize=(15, 8))
+    plt.title('Top 10 Best-Selling Items by Item Type')
+    plt.xlabel('Total Sales')
+    plt.ylabel('Item Type')
     plt.savefig('static/images/top_selling_items.png')
     plt.clf()
 # Visualization of Item Types
@@ -66,13 +66,21 @@ def create_sales_by_location_analysis():
 
 # Fat Content Analysis
 def fat_content_analysis():
-    plt.figure(figsize=(10, 6))
-    sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
-    plt.title('Distribution of Fat Content')
-    plt.xlabel('Fat Content')
-    plt.ylabel('Frequency')
-    plt.savefig('static/images/fat_content_analysis.png')
-    plt.clf()
+        df[' ItemFat Content'] = df[' ItemFat Content'].replace({
+        'LF': 'Low Fat',
+        'low fat': 'Low Fat',
+        'reg': 'Regular'
+        })
+
+        plt.figure(figsize=(10, 6))
+        sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
+        plt.title('Distribution of Fat Content')
+        plt.xlabel('Fat Content')
+        plt.ylabel('Frequency')
+        plt.savefig('static/images/fat_content_analyse.png')
+        plt.clf()
+
+
 #outlet size analysis
 def create_outlet_size_analysis():
     outlet_size_distribution = df['Outlet Siz0e'].value_counts()
@@ -122,7 +130,7 @@ def sales_trends():
 
 @app.route('/top-selling-items')
 def top_selling_items():
-    # create_top_selling_items_analysis()
+    create_top_selling_items()
     return render_template('top_selling_items.html')
 
 @app.route('/item-type-analysis')
@@ -132,7 +140,7 @@ def item_type_analysis():
 
 @app.route('/top-selling-items')
 def outlet_item_analysis():
-    # fat_content_analysis()
+    fat_content_analysis()
     return render_template('top_selling_items.html')
 
 
