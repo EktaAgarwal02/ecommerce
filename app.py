@@ -196,47 +196,35 @@ def create_outlet_size_analysis():
 
 # Visualization of Outlet Locations
 def create_outlet_location_analysis():
-        # Create a count plot for 'Outlet Location Type' using Plotly
-    location_counts = df['Outlet Location Type'].value_counts().reset_index()
-    location_counts.columns = ['Outlet Location Type', 'Count']  # Rename columns for clarity
+    data = {
+    'Outlet Location Type': ['Urban', 'Suburban', 'Rural'],
+    'Percentage': [39, 33, 28]  # Given percentages for each location type
+}
+
+# Create a DataFrame
+    outlet_location_distribution = pd.DataFrame(data)
     fig3=go.Figure()
-    # Create a bar chart with elegant colors
+# Create the bar chart
     fig3 = px.bar(
-        location_counts,
+        outlet_location_distribution,
         x='Outlet Location Type',
-        y='Count',
-        title='Distribution of Outlet Locations',
-        color='Outlet Location Type',  # Use Outlet Location Type for color differentiation
-        color_discrete_sequence=px.colors.sequential.Plasma  # Use an elegant sequential color palette
-    )
+        y='Percentage',
+        title='Distribution of Outlet Location Types',
+        labels={'Percentage': 'Percentage (%)', 'Outlet Location Type': 'Outlet Location Type'},
+            color='Outlet Location Type',  # Color differentiation by outlet type
+            width=800, height=500
+        )
 
-    # Update layout for aesthetics
+# Update layout for better aesthetics
     fig3.update_layout(
-        xaxis_title='Outlet Location Type',
-        yaxis_title='Count',
+        template='plotly_white',
+        paper_bgcolor='white',
+        font=dict(size=14),
         title_x=0.5,  # Center the title
-        template='plotly_white',  # Use a white theme
-        xaxis_tickangle=-45,  # Rotate x-axis labels for better visibility
-        paper_bgcolor='white',  # White paper background
-        plot_bgcolor='white',  # White plot background
-        height=600,  # Increase height for better visibility
-        width=900,   # Increase width for better visibility
-        font=dict(size=14),  # Increase font size
-        xaxis=dict(showgrid=True, gridcolor='lightgrey'),  # Add gridlines
-        yaxis=dict(showgrid=True, gridcolor='lightgrey')   # Add gridlines
     )
-
-    # Adding labels on top of the bars
-    fig3.update_traces(
-        texttemplate='%{y}',  # Show the count value
-        textposition='outside',  # Position text above the bars
-        marker=dict(line=dict(color='black', width=1))  # Add black border around bars
-    )
-    # Customize hover information
-    fig3.update_traces(hoverinfo='x+y', hovertemplate='Location Type: %{x}<br>Count: %{y}<extra></extra>')
     graph3_html = pio.to_html(fig3,full_html=False)
     return graph3_html
-    
+
 # Visualization of Outlet Establishment Year
 def create_Outlet_Establishment_Year():
     
