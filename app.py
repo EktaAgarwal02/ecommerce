@@ -107,19 +107,39 @@ def create_visibility_vs_sales_analysis():
     return graph9_html
 # Sales by Outlet Location Type
 def create_sales_by_location_analysis():
-    # Group by 'Outlet Location Type' and sum the 'Sales'
-    location_sales = df.groupby('Outlet Location Type')['Sales'].sum().reset_index()
+    data = {
+    'Outlet Type': ['Supermarket ', 'Grocery Store', 'Other'],
+    'Percentage': [65, 13, 22]  # Provided percentages
+}
+# Create a DataFrame
+    df = pd.DataFrame(data)
     fig6=go.Figure()
-    # Create the plot using plotly.express with multiple colors
-    fig6 = px.bar(location_sales, 
-        x='Outlet Location Type', 
-        y='Sales', 
-        color='Outlet Location Type',  # Use this argument to set colors by Outlet Location Type
-        title='Sales by Outlet Location Type',
-        labels={'Sales': 'Total Sales', 'Outlet Location Type': 'Outlet Location Type'},
-        width=800, height=500)
+    # Create a bar chart
+    fig6 = px.bar(
+        df,
+        x='Outlet Type',
+        y='Percentage',
+        title='Outlet Type Distribution',
+        labels={'Percentage': 'Percentage (%)', 'Outlet Type': 'Outlet Type'},
+        color='Outlet Type',  # Color differentiation by Outlet Type
+        color_discrete_map={
+            'Supermarket ': 'blue',
+            'Grocery Store': 'orange',
+            'Other': 'green'
+        },
+        width=700,
+        height=500
+    )
+# Customize layout for better aesthetics
+    fig6.update_layout(
+        title_x=0.5,  # Center the title
+        template='plotly_white',
+        paper_bgcolor='white',
+        font=dict(size=14),
+    )
     graph6_html = pio.to_html(fig6,full_html=False)
     return graph6_html
+    
 # # Fat Content Analysis
 # def fat_content_analysis():
 #         df[' ItemFat Content'] = df[' ItemFat Content'].replace({
@@ -285,7 +305,7 @@ def item_type_analysis():
 
 @app.route('/top-selling-items')
 def outlet_item_analysis():
-    fat_content_analysis()
+    #fat_content_analysis()
     return render_template('top_selling_items.html')
 
 
@@ -306,7 +326,6 @@ def Outlet_Size():
 def create_visibility_vs_sales_analysis():
     graph9=create_visibility_vs_sales_analysis()
     return render_template('visibility_vs_sales.html',graph9=graph9)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
