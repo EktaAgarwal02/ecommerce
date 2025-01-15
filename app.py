@@ -91,20 +91,6 @@ def create_item_type_analysis():
     graph2_html = pio.to_html(fig2,full_html=False)
     return graph2_html
 
-# Item Visibility vs Sales
-def create_visibility_vs_sales_analysis():
-    fig9=go.Figure()
-# Create the scatter plot using plotly.express with multi-color points
-    fig9 = px.scatter(df, 
-        x='Item Visibility', 
-        y='Sales', 
-        title='Item Visibility vs Sales',
-        labels={'Item Visibility': 'Item Visibility', 'Sales': 'Sales'},
-        color='Item Type',  # Use a categorical variable for color
-        opacity=0.5,  # Set opacity for points
-        width=800,height=500)
-    graph9_html = pio.to_html(fig9,full_html=False)
-    return graph9_html
 # Sales by Outlet Location Type
 def create_sales_by_location_analysis():
     data = {
@@ -140,23 +126,6 @@ def create_sales_by_location_analysis():
     graph6_html = pio.to_html(fig6,full_html=False)
     return graph6_html
     
-# # Fat Content Analysis
-# def fat_content_analysis():
-#         df[' ItemFat Content'] = df[' ItemFat Content'].replace({
-#         'LF': 'Low Fat',
-#         'low fat': 'Low Fat',
-#         'reg': 'Regular'
-#         })
-
-#         plt.figure(figsize=(10, 6))
-#         sns.histplot(df[' ItemFat Content'], bins=30, kde=True)
-#         plt.title('Distribution of Fat Content')
-#         plt.xlabel('Fat Content')
-#         plt.ylabel('Frequency')
-#         plt.savefig('static/images/fat_content_analyse.png')
-#         plt.clf()
-
-
 #outlet size analysis
 def create_outlet_size_analysis():
     outlet_size_distribution = df['Outlet Siz0e'].value_counts()
@@ -310,10 +279,6 @@ def Outlet_Size():
     graph4=create_outlet_size_analysis()
     graph5=create_Outlet_Establishment_Year()
     return render_template('outlet_item_analysis.html',graph3=graph3,graph4=graph4,graph5=graph5)
-@app.route('/visibility-vs-sales')
-def create_visibility_vs_sales_analysis():
-    graph9=create_visibility_vs_sales_analysis()
-    return render_template('visibility_vs_sales.html',graph9=graph9)
 
 if __name__ == '__main__':
     app.run(debug=True)
